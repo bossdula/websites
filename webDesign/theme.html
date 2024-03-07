@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Mode</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+    <nav>
+        <button class="light-mode" onclick="light()">Light</button>
+        <button class="dark-mode" onclick="dark()">Dark</button>
+    </nav>
+    
+    <div class="content">
+        <h3>Welcome</h3>
+
+        <p>
+            Click to theme mode button to see the effect of the theme
+        </p>
+
+        <p>
+            Light mode button is automatically displayed when you click
+        </p>
+
+        <p>
+            Dark mode button changes when you click
+        </p>
+    </div>
+</body>
+
+<script>
+    const content = document.querySelector(".content");
+
+    function dark() {
+        content.style.backgroundColor = "grey";
+        content.style.color = "#ffffff";
+    }
+
+    function light() {
+        content.style.backgroundColor = "#f6f6f6";
+        content.style.color = "black";
+    }
+</script>
+</html>

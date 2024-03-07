@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* navigation bar css */
+/* navigation bar css */
+body {
+    background: #e3e9f7;
+}
+
+img{
+    width: 70px;
+    height: 40px;
+}
+header {
+    width: 80%;
+    height: 70px;
+    background: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 120px;
+    margin-top: 8px;
+}
+
+nav .logo {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    color: #24262b;
+    display: block;
+    margin: 0 2px;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 18px;
+    transition: 0.2s;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #f6f4ff;
+}
+
+nav ul li a.active {
+    background: #675cff;
+    color: #f6f4ff;
+}
+
+.hamburger {
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.hamburger:hover{
+    background: #f6f4ff;
+}
+
+.hamburger div{
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #212526;
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    nav {
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: #fefefe;
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    #nav_check:checked ~ nav {
+        left: 0;
+    }
+
+    nav .logo {
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    nav ul li a {
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
+/* content css */
+/* content css */
+p {
+    padding: 15px;
+    font-size: 18px;
+    text-indent: 40px;
+    text-align: left;
+    line-height: 2;
+    letter-spacing: 1.5px;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-style: italic;
+    font-weight: 480;
+    width: 80%;
+    margin: 5px auto;
+    border-bottom: 1px solid #675cff;
+    color: #24262b;
+   }
+
+
+
+
+/* footer css */
+/* footer css */
+body {
+    line-height: 1.5;
+}
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    text-transform: capitalize;
+    color: #f4f4f4;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #675cff;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li {
+    margin-bottom: 5px;
+}
+
+.footer-col ul li a {
+    font-size: 14px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #999;
+    transition: all .5s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 8px;
+    border-left: 1px solid #675cff;
+}
+
+/* Responsive CSS */
+@media (max-width: 767px){
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .row {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 615px){
+    .footer-col {
+        width: 100%;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+ 
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h4>AHMED</h4>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+
+        <nav>
+            <div class="logo">
+                <h4>AHMED</h4>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="first.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="#">Products</a>
+                </li>
+                <li>
+                    <a href="#">Features</a>
+                </li>
+                <li>
+                    <a href="#">Pricing</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+<!-- end of navigation bar -->
+
+
+<!-- content starting here -->
+
+    <p>
+        My name is Ahmed Abdallah Ali. I am the student from the University of Dar es Salaam where I pursue my Bachelor Degree in Computer Science. 
+        I'm the first year student from the College of Information and Communication Technology. 
+        My name is Ahmed Abdallah Ali. I am the student from the University of Dar es Salaam where I pursue my Bachelor Degree in Computer Science. 
+        I'm the first year student from the College of Information and Communication Technology.
+    </p> <br>
+
+    <p>
+        My name is Ahmed Abdallah Ali. I am the student from the University of Dar es Salaam where I pursue my Bachelor Degree in Computer Science. 
+        I'm the first year student from the College of Information and Communication Technology. 
+        My name is Ahmed Abdallah Ali. I am the student from the University of Dar es Salaam where I pursue my Bachelor Degree in Computer Science. 
+        I'm the first year student from the College of Information and Communication Technology.
+    </p> <br>
+
+    <p>
+        My name is Ahmed Abdallah Ali. I am the student from the University of Dar es Salaam where I pursue my Bachelor Degree in Computer Science. 
+        I'm the first year student from the College of Information and Communication Technology. 
+        My name is Ahmed Abdallah Ali. I am the student from the University of Dar es Salaam where I pursue my Bachelor Degree in Computer Science. 
+        I'm the first year student from the College of Information and Communication Technology.
+    </p> <br>
+
+
+<!-- footer part -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <ul>
+                        <li><a href="#">facebook</a></li>
+                        <li><a href="#">instagram</a></li>
+                        <li><a href="#">twitter</a></li>
+                        <li><a href="#">linkedIn</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

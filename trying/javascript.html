@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+ body{
+background-color:dodgerblue;
+color:white;
+}
+a{
+text-decoration:none;
+font-family:montserrat;
+color:aquamarine;
+}
+#menulist{
+display:none;
+color:red;
+background-color:skyblue;
+font-family:montserrat;
+}
+</style>
+
+<title>My Website</title>
+</head>
+
+<body>
+<div>
+<button type="button" onclick="displayMenu()">MENU</button>
+<div id="links">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contacts</a>
+<a href="#">Comment</a>
+</div>
+</div>
+
+<div id="menulist">
+<button type="button" onclick="hideMenu()"> x</button>
+<h3><u>OUR SERVICES:</u></h3>
+<a href="#">logo designing</a><br>
+<a href="#">tshirt printing</a><br>
+<a href="#">digital marketing</a><br>
+<hr><hr>
+</div>
+
+<h1>My first website</h1>
+<p>I want to share this knowledge of JAVASCRIPT to you my fellow students.</p>
+</body>
+<script>
+    function hideMenu(){
+        document.getElementById("menulist").style.display = 'none';
+        document.getElementById("links").style.display = 'block';
+    }
+    function displayMenu(){
+        document.getElementById("menulist").style.display = 'block';
+        document.getElementById("links").style.display = 'none';
+    }
+</script>
+
+</html>

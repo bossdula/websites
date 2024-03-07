@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Menu</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: normal;
+            transition: all .3s ease-out;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f7eaf6;
+        }
+
+        #menu-btn {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+            border-radius: 50%;
+            font-size: 30px;
+            cursor: pointer;
+            background: #f9f906;
+            color: #000;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        #menu-btn.fa-times {
+            transform: rotate(180deg);
+            background: #000;
+            color: #fff;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            height: 100%;
+            width: 100%;
+            background: #f9f906;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+            padding-bottom: 50px;
+            clip-path: circle(0% at 95.3% 8.5%);
+        }
+
+        .navbar.active {
+            clip-path: circle(140% at 95.3% 8.5%);
+        }
+
+        .navbar a {
+            font-size: 30px;
+            padding-bottom: 30px;
+            color: #000;
+        }
+
+        .navbar a::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5em;
+            color: #000;
+            pointer-events: none;
+            font-weight: bolder;
+            letter-spacing: .4em;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        .navbar a:hover::before {
+            letter-spacing: 0em;
+            opacity: .1;
+            transition: .3s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <!-- <div id="menu-btn" class="fas fa-bars"></div> -->
+        <div id="menu-btn">=</div>
+
+        <nav class="navbar">
+            <a href="#" data-text="home">home</a>
+            <a href="#" data-text="about">about</a>
+            <a href="#" data-text="gallery">gallery</a>
+            <a href="#" data-text="portfolio">portfolio</a>
+            <a href="#" data-text="blogs">blogs</a>
+            <a href="#" data-text="contact">contact</a>
+        </nav>
+    </header>
+</body>
+
+<script>
+    document.querySelector('#menu-btn').onclick = () => {
+        document.querySelector('#menu-btn').classList.toggle('fa-times');
+        document.querySelector('.navbar').classList.toggle('active');
+    }
+</script>
+</html>
