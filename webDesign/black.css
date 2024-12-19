@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(120deg, #333, indianred);
+    background: linear-gradient(110deg, #2d4af0, rgb(64, 183, 230));
 }
 
 img{
@@ -28,6 +28,7 @@ header {
     /* border-radius: 0 0 10px 10px; */
     border-radius: 15px;
     margin: 5px auto;
+    border: 1px solid whitesmoke;
 }
 
 .logo {
@@ -93,18 +94,24 @@ nav ul li a.active {
 
 .parts{
     width: 90%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     padding: 20px 40px;
-    border-radius: 20px 0px 20px 0px;
+    border-radius: 0px 8px 16px 24px;
     margin: 20px auto;
-    border: 1px solid whitesmoke;   
+    border: 1px solid whitesmoke;
 }
 
 .parts h4 {
-    color: indianred;
+    color: #2d4af0;
     font-size: 30px;
     margin-bottom: 20px;
-    border-bottom: 1px solid indianred;
+    border-bottom: 1px solid #2d4af0;
+}
+
+.parts img {
+    width: 50%;
+    height: 300px;
+    justify-items: center;
 }
 
 .parts p {
